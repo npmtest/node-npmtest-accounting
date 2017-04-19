@@ -1,7 +1,10 @@
-# test coverage for  [accounting (v0.4.1)](http://openexchangerates.github.io/accounting.js)  [![npm package](https://img.shields.io/npm/v/npmtest-accounting.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-accounting) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-accounting.svg)](https://travis-ci.org/npmtest/node-npmtest-accounting)
+# npmtest-accounting
+
+#### test coverage for  [accounting (v0.4.1)](http://openexchangerates.github.io/accounting.js)  [![npm package](https://img.shields.io/npm/v/npmtest-accounting.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-accounting) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-accounting.svg)](https://travis-ci.org/npmtest/node-npmtest-accounting)
+
 #### number, money and currency formatting library
 
-[![NPM](https://nodei.co/npm/accounting.png?downloads=true)](https://www.npmjs.com/package/accounting)
+[![NPM](https://nodei.co/npm/accounting.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/accounting)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-accounting/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-accounting/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-accounting/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-accounting/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-accounting/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-accounting/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-accounting/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-accounting/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-accounting/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-accounting/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-accounting%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-accounting/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-accounting/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-accounting/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-accounting/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-accounting%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-accounting/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-accounting/build/test-report.html](https://npmtest.github.io/node-npmtest-accounting/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-accounting/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-accounting/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-accounting/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-accounting/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-accounting/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-accounting/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-accounting/build/screenCapture.npmPackageListing.svg)
 
@@ -28,7 +37,6 @@
 {
     "author": {
         "name": "Open Exchange Rates",
-        "email": "info@openexchangerates.org",
         "url": "https://www.openexchangerates.org"
     },
     "bugs": {
@@ -37,12 +45,10 @@
     "contributors": [
         {
             "name": "Open Exchange Rates",
-            "email": "info@openxchangerates.org",
             "url": "https://openexchangerates.org"
         },
         {
             "name": "Joss Crowcroft",
-            "email": "josscrowcroft@gmail.com",
             "url": "http://www.josscrowcroft.com"
         }
     ],
@@ -69,13 +75,11 @@
     "main": "accounting.js",
     "maintainers": [
         {
-            "name": "joss",
-            "email": "josscrowcroft@gmail.com"
+            "name": "joss"
         }
     ],
     "name": "accounting",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/openexchangerates/accounting.js.git"
