@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-accounting/accounting/accounting.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-accounting/node_modules/accounting/accounting.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-accounting">npmtest-accounting (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-accounting/accounting/accounting.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-accounting/node_modules/accounting/accounting.js</span></h1>
     <h2>
         
         Statements: <span class="metric">21.65% <small>(21 / 97)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-accounting/accounting/</a> &#187; accounting.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-accounting/node_modules/accounting/</a> » accounting.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -1097,23 +1095,23 @@
 	 * Tests whether supplied parameter is a string
 	 * from underscore.js
 	 */
-<span class="fstat-no" title="function not covered" >	function isString(obj) {</span>
-<span class="cstat-no" title="statement not covered" >		return !!(obj === '' || (obj &amp;&amp; obj.charCodeAt &amp;&amp; obj.substr));</span>
+<span class="fstat-no" title="function not covered">	function isString(obj) {</span>
+<span class="cstat-no" title="statement not covered">		return !!(obj === '' || (obj &amp;&amp; obj.charCodeAt &amp;&amp; obj.substr));</span>
 	}
 &nbsp;
 	/**
 	 * Tests whether supplied parameter is a string
 	 * from underscore.js, delegates to ECMA5's native Array.isArray
 	 */
-<span class="fstat-no" title="function not covered" >	function isArray(obj) {</span>
-<span class="cstat-no" title="statement not covered" >		return nativeIsArray ? nativeIsArray(obj) : toString.call(obj) === '[object Array]';</span>
+<span class="fstat-no" title="function not covered">	function isArray(obj) {</span>
+<span class="cstat-no" title="statement not covered">		return nativeIsArray ? nativeIsArray(obj) : toString.call(obj) === '[object Array]';</span>
 	}
 &nbsp;
 	/**
 	 * Tests whether supplied parameter is a true object
 	 */
-<span class="fstat-no" title="function not covered" >	function isObject(obj) {</span>
-<span class="cstat-no" title="statement not covered" >		return obj &amp;&amp; toString.call(obj) === '[object Object]';</span>
+<span class="fstat-no" title="function not covered">	function isObject(obj) {</span>
+<span class="cstat-no" title="statement not covered">		return obj &amp;&amp; toString.call(obj) === '[object Object]';</span>
 	}
 &nbsp;
 	/**
@@ -1121,18 +1119,18 @@
 	 *
 	 * Used for abstracting parameter handling from API methods
 	 */
-<span class="fstat-no" title="function not covered" >	function defaults(object, defs) {</span>
-<span class="cstat-no" title="statement not covered" >		var key;</span>
-<span class="cstat-no" title="statement not covered" >		object = object || {};</span>
-<span class="cstat-no" title="statement not covered" >		defs = defs || {};</span>
+<span class="fstat-no" title="function not covered">	function defaults(object, defs) {</span>
+<span class="cstat-no" title="statement not covered">		var key;</span>
+<span class="cstat-no" title="statement not covered">		object = object || {};</span>
+<span class="cstat-no" title="statement not covered">		defs = defs || {};</span>
 		// Iterate over object non-prototype properties:
-<span class="cstat-no" title="statement not covered" >		for (key in defs) {</span>
-<span class="cstat-no" title="statement not covered" >			if (defs.hasOwnProperty(key)) {</span>
+<span class="cstat-no" title="statement not covered">		for (key in defs) {</span>
+<span class="cstat-no" title="statement not covered">			if (defs.hasOwnProperty(key)) {</span>
 				// Replace values with defaults only if undefined (allow empty/zero values):
-<span class="cstat-no" title="statement not covered" >				if (object[key] == null) <span class="cstat-no" title="statement not covered" >object[key] = defs[key];</span></span>
+<span class="cstat-no" title="statement not covered">				if (object[key] == null) <span class="cstat-no" title="statement not covered">object[key] = defs[key];</span></span>
 			}
 		}
-<span class="cstat-no" title="statement not covered" >		return object;</span>
+<span class="cstat-no" title="statement not covered">		return object;</span>
 	}
 &nbsp;
 	/**
@@ -1141,27 +1139,27 @@
 	 * Returns a new Array as a result of calling `iterator` on each array value.
 	 * Defers to native Array.map if available
 	 */
-<span class="fstat-no" title="function not covered" >	function map(obj, iterator, context) {</span>
-<span class="cstat-no" title="statement not covered" >		var results = [], i, j;</span>
+<span class="fstat-no" title="function not covered">	function map(obj, iterator, context) {</span>
+<span class="cstat-no" title="statement not covered">		var results = [], i, j;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (!obj) <span class="cstat-no" title="statement not covered" >return results;</span></span>
+<span class="cstat-no" title="statement not covered">		if (!obj) <span class="cstat-no" title="statement not covered">return results;</span></span>
 &nbsp;
 		// Use native .map method if it exists:
-<span class="cstat-no" title="statement not covered" >		if (nativeMap &amp;&amp; obj.map === nativeMap) <span class="cstat-no" title="statement not covered" >return obj.map(iterator, context);</span></span>
+<span class="cstat-no" title="statement not covered">		if (nativeMap &amp;&amp; obj.map === nativeMap) <span class="cstat-no" title="statement not covered">return obj.map(iterator, context);</span></span>
 &nbsp;
 		// Fallback for native .map:
-<span class="cstat-no" title="statement not covered" >		for (i = 0, j = obj.length; i &lt; j; i++ ) {</span>
-<span class="cstat-no" title="statement not covered" >			results[i] = iterator.call(context, obj[i], i, obj);</span>
+<span class="cstat-no" title="statement not covered">		for (i = 0, j = obj.length; i &lt; j; i++ ) {</span>
+<span class="cstat-no" title="statement not covered">			results[i] = iterator.call(context, obj[i], i, obj);</span>
 		}
-<span class="cstat-no" title="statement not covered" >		return results;</span>
+<span class="cstat-no" title="statement not covered">		return results;</span>
 	}
 &nbsp;
 	/**
 	 * Check and normalise the value of precision (must be positive integer)
 	 */
-<span class="fstat-no" title="function not covered" >	function checkPrecision(val, base) {</span>
-<span class="cstat-no" title="statement not covered" >		val = Math.round(Math.abs(val));</span>
-<span class="cstat-no" title="statement not covered" >		return isNaN(val)? base : val;</span>
+<span class="fstat-no" title="function not covered">	function checkPrecision(val, base) {</span>
+<span class="cstat-no" title="statement not covered">		val = Math.round(Math.abs(val));</span>
+<span class="cstat-no" title="statement not covered">		return isNaN(val)? base : val;</span>
 	}
 &nbsp;
 &nbsp;
@@ -1174,27 +1172,27 @@
 	 *
 	 * Either string or format.pos must contain "%v" (value) to be valid
 	 */
-<span class="fstat-no" title="function not covered" >	function checkCurrencyFormat(format) {</span>
-<span class="cstat-no" title="statement not covered" >		var defaults = lib.settings.currency.format;</span>
+<span class="fstat-no" title="function not covered">	function checkCurrencyFormat(format) {</span>
+<span class="cstat-no" title="statement not covered">		var defaults = lib.settings.currency.format;</span>
 &nbsp;
 		// Allow function as format parameter (should return string or object):
-<span class="cstat-no" title="statement not covered" >		if ( typeof format === "function" ) <span class="cstat-no" title="statement not covered" >format = format();</span></span>
+<span class="cstat-no" title="statement not covered">		if ( typeof format === "function" ) <span class="cstat-no" title="statement not covered">format = format();</span></span>
 &nbsp;
 		// Format can be a string, in which case `value` ("%v") must be present:
-<span class="cstat-no" title="statement not covered" >		if ( isString( format ) &amp;&amp; format.match("%v") ) {</span>
+<span class="cstat-no" title="statement not covered">		if ( isString( format ) &amp;&amp; format.match("%v") ) {</span>
 &nbsp;
 			// Create and return positive, negative and zero formats:
-<span class="cstat-no" title="statement not covered" >			return {</span>
+<span class="cstat-no" title="statement not covered">			return {</span>
 				pos : format,
 				neg : format.replace("-", "").replace("%v", "-%v"),
 				zero : format
 			};
 &nbsp;
 		// If no format, or object is missing valid positive value, use defaults:
-		} else <span class="cstat-no" title="statement not covered" >if ( !format || !format.pos || !format.pos.match("%v") ) {</span>
+		} else <span class="cstat-no" title="statement not covered">if ( !format || !format.pos || !format.pos.match("%v") ) {</span>
 &nbsp;
 			// If defaults is a string, casts it to an object for faster checking next time:
-<span class="cstat-no" title="statement not covered" >			return ( !isString( defaults ) ) ? defaults : lib.settings.currency.format = {</span>
+<span class="cstat-no" title="statement not covered">			return ( !isString( defaults ) ) ? defaults : lib.settings.currency.format = {</span>
 				pos : defaults,
 				neg : defaults.replace("%v", "-%v"),
 				zero : defaults
@@ -1202,7 +1200,7 @@
 &nbsp;
 		}
 		// Otherwise, assume format was fine:
-<span class="cstat-no" title="statement not covered" >		return format;</span>
+<span class="cstat-no" title="statement not covered">		return format;</span>
 	}
 &nbsp;
 &nbsp;
@@ -1220,25 +1218,25 @@
 	 *
 	 * Doesn't throw any errors (`NaN`s become 0) but this may change in future
 	 */
-	var unformat = lib.unformat = lib.parse = <span class="fstat-no" title="function not covered" >function(value, decimal) {</span>
+	var unformat = lib.unformat = lib.parse = <span class="fstat-no" title="function not covered">function(value, decimal) {</span>
 		// Recursively unformat arrays:
-<span class="cstat-no" title="statement not covered" >		if (isArray(value)) {</span>
-<span class="cstat-no" title="statement not covered" >			return map(value, <span class="fstat-no" title="function not covered" >function(val) {</span></span>
-<span class="cstat-no" title="statement not covered" >				return unformat(val, decimal);</span>
+<span class="cstat-no" title="statement not covered">		if (isArray(value)) {</span>
+<span class="cstat-no" title="statement not covered">			return map(value, <span class="fstat-no" title="function not covered">function(val) {</span></span>
+<span class="cstat-no" title="statement not covered">				return unformat(val, decimal);</span>
 			});
 		}
 &nbsp;
 		// Fails silently (need decent errors):
-<span class="cstat-no" title="statement not covered" >		value = value || 0;</span>
+<span class="cstat-no" title="statement not covered">		value = value || 0;</span>
 &nbsp;
 		// Return the value as-is if it's already a number:
-<span class="cstat-no" title="statement not covered" >		if (typeof value === "number") <span class="cstat-no" title="statement not covered" >return value;</span></span>
+<span class="cstat-no" title="statement not covered">		if (typeof value === "number") <span class="cstat-no" title="statement not covered">return value;</span></span>
 &nbsp;
 		// Default decimal point comes from settings, but could be set to eg. "," in opts:
-<span class="cstat-no" title="statement not covered" >		decimal = decimal || lib.settings.number.decimal;</span>
+<span class="cstat-no" title="statement not covered">		decimal = decimal || lib.settings.number.decimal;</span>
 &nbsp;
 		 // Build regex to strip out everything except digits, decimal point and minus sign:
-<span class="cstat-no" title="statement not covered" >		var regex = new RegExp("[^0-9-" + decimal + "]", ["g"]),</span>
+<span class="cstat-no" title="statement not covered">		var regex = new RegExp("[^0-9-" + decimal + "]", ["g"]),</span>
 			unformatted = parseFloat(
 				("" + value)
 				.replace(/\((.*)\)/, "-$1") // replace bracketed values with negatives
@@ -1247,7 +1245,7 @@
 			);
 &nbsp;
 		// This will fail silently which may cause trouble, let's wait and see:
-<span class="cstat-no" title="statement not covered" >		return !isNaN(unformatted) ? unformatted : 0;</span>
+<span class="cstat-no" title="statement not covered">		return !isNaN(unformatted) ? unformatted : 0;</span>
 	};
 &nbsp;
 &nbsp;
@@ -1257,12 +1255,12 @@
 	 * Fixes binary rounding issues (eg. (0.615).toFixed(2) === "0.61") that present
 	 * problems for accounting- and finance-related software.
 	 */
-	var toFixed = lib.toFixed = <span class="fstat-no" title="function not covered" >function(value, precision) {</span>
-<span class="cstat-no" title="statement not covered" >		precision = checkPrecision(precision, lib.settings.number.precision);</span>
-<span class="cstat-no" title="statement not covered" >		var power = Math.pow(10, precision);</span>
+	var toFixed = lib.toFixed = <span class="fstat-no" title="function not covered">function(value, precision) {</span>
+<span class="cstat-no" title="statement not covered">		precision = checkPrecision(precision, lib.settings.number.precision);</span>
+<span class="cstat-no" title="statement not covered">		var power = Math.pow(10, precision);</span>
 &nbsp;
 		// Multiply up by precision, round accurately, then divide and use native toFixed():
-<span class="cstat-no" title="statement not covered" >		return (Math.round(lib.unformat(value) * power) / power).toFixed(precision);</span>
+<span class="cstat-no" title="statement not covered">		return (Math.round(lib.unformat(value) * power) / power).toFixed(precision);</span>
 	};
 &nbsp;
 &nbsp;
@@ -1273,19 +1271,19 @@
 	 * Localise by overriding the precision and thousand / decimal separators
 	 * 2nd parameter `precision` can be an object matching `settings.number`
 	 */
-	var formatNumber = lib.formatNumber = lib.format = <span class="fstat-no" title="function not covered" >function(number, precision, thousand, decimal) {</span>
+	var formatNumber = lib.formatNumber = lib.format = <span class="fstat-no" title="function not covered">function(number, precision, thousand, decimal) {</span>
 		// Resursively format arrays:
-<span class="cstat-no" title="statement not covered" >		if (isArray(number)) {</span>
-<span class="cstat-no" title="statement not covered" >			return map(number, <span class="fstat-no" title="function not covered" >function(val) {</span></span>
-<span class="cstat-no" title="statement not covered" >				return formatNumber(val, precision, thousand, decimal);</span>
+<span class="cstat-no" title="statement not covered">		if (isArray(number)) {</span>
+<span class="cstat-no" title="statement not covered">			return map(number, <span class="fstat-no" title="function not covered">function(val) {</span></span>
+<span class="cstat-no" title="statement not covered">				return formatNumber(val, precision, thousand, decimal);</span>
 			});
 		}
 &nbsp;
 		// Clean up number:
-<span class="cstat-no" title="statement not covered" >		number = unformat(number);</span>
+<span class="cstat-no" title="statement not covered">		number = unformat(number);</span>
 &nbsp;
 		// Build options object from second param (if object) or all params, extending defaults:
-<span class="cstat-no" title="statement not covered" >		var opts = defaults(</span>
+<span class="cstat-no" title="statement not covered">		var opts = defaults(</span>
 				(isObject(precision) ? precision : {
 					precision : precision,
 					thousand : thousand,
@@ -1303,7 +1301,7 @@
 			mod = base.length &gt; 3 ? base.length % 3 : 0;
 &nbsp;
 		// Format the number:
-<span class="cstat-no" title="statement not covered" >		return negative + (mod ? base.substr(0, mod) + opts.thousand : "") + base.substr(mod).replace(/(\d{3})(?=\d)/g, "$1" + opts.thousand) + (usePrecision ? opts.decimal + toFixed(Math.abs(number), usePrecision).split('.')[1] : "");</span>
+<span class="cstat-no" title="statement not covered">		return negative + (mod ? base.substr(0, mod) + opts.thousand : "") + base.substr(mod).replace(/(\d{3})(?=\d)/g, "$1" + opts.thousand) + (usePrecision ? opts.decimal + toFixed(Math.abs(number), usePrecision).split('.')[1] : "");</span>
 	};
 &nbsp;
 &nbsp;
@@ -1318,19 +1316,19 @@
 	 *
 	 * To do: tidy up the parameters
 	 */
-	var formatMoney = lib.formatMoney = <span class="fstat-no" title="function not covered" >function(number, symbol, precision, thousand, decimal, format) {</span>
+	var formatMoney = lib.formatMoney = <span class="fstat-no" title="function not covered">function(number, symbol, precision, thousand, decimal, format) {</span>
 		// Resursively format arrays:
-<span class="cstat-no" title="statement not covered" >		if (isArray(number)) {</span>
-<span class="cstat-no" title="statement not covered" >			return map(number, <span class="fstat-no" title="function not covered" >function(val){</span></span>
-<span class="cstat-no" title="statement not covered" >				return formatMoney(val, symbol, precision, thousand, decimal, format);</span>
+<span class="cstat-no" title="statement not covered">		if (isArray(number)) {</span>
+<span class="cstat-no" title="statement not covered">			return map(number, <span class="fstat-no" title="function not covered">function(val){</span></span>
+<span class="cstat-no" title="statement not covered">				return formatMoney(val, symbol, precision, thousand, decimal, format);</span>
 			});
 		}
 &nbsp;
 		// Clean up number:
-<span class="cstat-no" title="statement not covered" >		number = unformat(number);</span>
+<span class="cstat-no" title="statement not covered">		number = unformat(number);</span>
 &nbsp;
 		// Build options object from second param (if object) or all params, extending defaults:
-<span class="cstat-no" title="statement not covered" >		var opts = defaults(</span>
+<span class="cstat-no" title="statement not covered">		var opts = defaults(</span>
 				(isObject(symbol) ? symbol : {
 					symbol : symbol,
 					precision : precision,
@@ -1348,7 +1346,7 @@
 			useFormat = number &gt; 0 ? formats.pos : number &lt; 0 ? formats.neg : formats.zero;
 &nbsp;
 		// Return with currency symbol added:
-<span class="cstat-no" title="statement not covered" >		return useFormat.replace('%s', opts.symbol).replace('%v', formatNumber(Math.abs(number), checkPrecision(opts.precision), opts.thousand, opts.decimal));</span>
+<span class="cstat-no" title="statement not covered">		return useFormat.replace('%s', opts.symbol).replace('%v', formatNumber(Math.abs(number), checkPrecision(opts.precision), opts.thousand, opts.decimal));</span>
 	};
 &nbsp;
 &nbsp;
@@ -1364,11 +1362,11 @@
 	 * NB: `white-space:pre` CSS rule is required on the list container to prevent
 	 * browsers from collapsing the whitespace in the output strings.
 	 */
-	lib.formatColumn = <span class="fstat-no" title="function not covered" >function(list, symbol, precision, thousand, decimal, format) {</span>
-<span class="cstat-no" title="statement not covered" >		if (!list) <span class="cstat-no" title="statement not covered" >return [];</span></span>
+	lib.formatColumn = <span class="fstat-no" title="function not covered">function(list, symbol, precision, thousand, decimal, format) {</span>
+<span class="cstat-no" title="statement not covered">		if (!list) <span class="cstat-no" title="statement not covered">return [];</span></span>
 &nbsp;
 		// Build options object from second param (if object) or all params, extending defaults:
-<span class="cstat-no" title="statement not covered" >		var opts = defaults(</span>
+<span class="cstat-no" title="statement not covered">		var opts = defaults(</span>
 				(isObject(symbol) ? symbol : {
 					symbol : symbol,
 					precision : precision,
@@ -1389,33 +1387,33 @@
 			maxLength = 0,
 &nbsp;
 			// Format the list according to options, store the length of the longest string:
-			formatted = map(list, <span class="fstat-no" title="function not covered" >function(val, i) {</span>
-<span class="cstat-no" title="statement not covered" >				if (isArray(val)) {</span>
+			formatted = map(list, <span class="fstat-no" title="function not covered">function(val, i) {</span>
+<span class="cstat-no" title="statement not covered">				if (isArray(val)) {</span>
 					// Recursively format columns if list is a multi-dimensional array:
-<span class="cstat-no" title="statement not covered" >					return lib.formatColumn(val, opts);</span>
+<span class="cstat-no" title="statement not covered">					return lib.formatColumn(val, opts);</span>
 				} else {
 					// Clean up the value
-<span class="cstat-no" title="statement not covered" >					val = unformat(val);</span>
+<span class="cstat-no" title="statement not covered">					val = unformat(val);</span>
 &nbsp;
 					// Choose which format to use for this value (pos, neg or zero):
-<span class="cstat-no" title="statement not covered" >					var useFormat = val &gt; 0 ? formats.pos : val &lt; 0 ? formats.neg : formats.zero,</span>
+<span class="cstat-no" title="statement not covered">					var useFormat = val &gt; 0 ? formats.pos : val &lt; 0 ? formats.neg : formats.zero,</span>
 &nbsp;
 						// Format this value, push into formatted list and save the length:
 						fVal = useFormat.replace('%s', opts.symbol).replace('%v', formatNumber(Math.abs(val), checkPrecision(opts.precision), opts.thousand, opts.decimal));
 &nbsp;
-<span class="cstat-no" title="statement not covered" >					if (fVal.length &gt; maxLength) <span class="cstat-no" title="statement not covered" >maxLength = fVal.length;</span></span>
-<span class="cstat-no" title="statement not covered" >					return fVal;</span>
+<span class="cstat-no" title="statement not covered">					if (fVal.length &gt; maxLength) <span class="cstat-no" title="statement not covered">maxLength = fVal.length;</span></span>
+<span class="cstat-no" title="statement not covered">					return fVal;</span>
 				}
 			});
 &nbsp;
 		// Pad each number in the list and send back the column of numbers:
-<span class="cstat-no" title="statement not covered" >		return map(formatted, <span class="fstat-no" title="function not covered" >function(val, i) {</span></span>
+<span class="cstat-no" title="statement not covered">		return map(formatted, <span class="fstat-no" title="function not covered">function(val, i) {</span></span>
 			// Only if this is a string (not a nested array, which would have already been padded):
-<span class="cstat-no" title="statement not covered" >			if (isString(val) &amp;&amp; val.length &lt; maxLength) {</span>
+<span class="cstat-no" title="statement not covered">			if (isString(val) &amp;&amp; val.length &lt; maxLength) {</span>
 				// Depending on symbol position, pad after symbol or at index 0:
-<span class="cstat-no" title="statement not covered" >				return padAfterSymbol ? val.replace(opts.symbol, opts.symbol+(new Array(maxLength - val.length + 1).join(" "))) : (new Array(maxLength - val.length + 1).join(" ")) + val;</span>
+<span class="cstat-no" title="statement not covered">				return padAfterSymbol ? val.replace(opts.symbol, opts.symbol+(new Array(maxLength - val.length + 1).join(" "))) : (new Array(maxLength - val.length + 1).join(" ")) + val;</span>
 			}
-<span class="cstat-no" title="statement not covered" >			return val;</span>
+<span class="cstat-no" title="statement not covered">			return val;</span>
 		});
 	};
 &nbsp;
@@ -1424,43 +1422,44 @@
 &nbsp;
 	// Export accounting for CommonJS. If being loaded as an AMD module, define it as such.
 	// Otherwise, just add `accounting` to the global object
-	<span class="missing-if-branch" title="else path not taken" >E</span>if (typeof exports !== 'undefined') {
-		<span class="missing-if-branch" title="else path not taken" >E</span>if (typeof module !== 'undefined' &amp;&amp; module.exports) {
+	<span class="missing-if-branch" title="else path not taken">E</span>if (typeof exports !== 'undefined') {
+		<span class="missing-if-branch" title="else path not taken">E</span>if (typeof module !== 'undefined' &amp;&amp; module.exports) {
 			exports = module.exports = lib;
 		}
 		exports.accounting = lib;
-	} else <span class="cstat-no" title="statement not covered" >if (typeof define === 'function' &amp;&amp; define.amd) {</span>
+	} else <span class="cstat-no" title="statement not covered">if (typeof define === 'function' &amp;&amp; define.amd) {</span>
 		// Return the library as an AMD module:
-<span class="cstat-no" title="statement not covered" >		define([], <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >			return lib;</span>
+<span class="cstat-no" title="statement not covered">		define([], <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">			return lib;</span>
 		});
 	} else {
 		// Use accounting.noConflict to restore `accounting` back to its original value.
 		// Returns a reference to the library's `accounting` object;
 		// e.g. `var numbers = accounting.noConflict();`
-<span class="cstat-no" title="statement not covered" >		lib.noConflict = (<span class="fstat-no" title="function not covered" >function(oldAccounting) {</span></span>
-<span class="cstat-no" title="statement not covered" >			return <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered">		lib.noConflict = (<span class="fstat-no" title="function not covered">function(oldAccounting) {</span></span>
+<span class="cstat-no" title="statement not covered">			return <span class="fstat-no" title="function not covered">function() {</span></span>
 				// Reset the value of the root's `accounting` variable:
-<span class="cstat-no" title="statement not covered" >				root.accounting = oldAccounting;</span>
+<span class="cstat-no" title="statement not covered">				root.accounting = oldAccounting;</span>
 				// Delete the noConflict method:
-<span class="cstat-no" title="statement not covered" >				lib.noConflict = undefined;</span>
+<span class="cstat-no" title="statement not covered">				lib.noConflict = undefined;</span>
 				// Return reference to the library to re-assign it:
-<span class="cstat-no" title="statement not covered" >				return lib;</span>
+<span class="cstat-no" title="statement not covered">				return lib;</span>
 			};
 		})(root.accounting);
 &nbsp;
 		// Declare `fx` on the root (global/window) object:
-<span class="cstat-no" title="statement not covered" >		root['accounting'] = lib;</span>
+<span class="cstat-no" title="statement not covered">		root['accounting'] = lib;</span>
 	}
 &nbsp;
 	// Root will be `window` in browser or `global` on the server:
 }(this));
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 12 2017 00:49:32 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 05:00:50 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
